@@ -46,7 +46,7 @@ window.onload = function() {
 	console.log('loading session');
 	loadSheets();
     } else {
-	
+	newSheet();
     }
 
     document.getElementById('saveSheet').addEventListener('click', saveSheet);
