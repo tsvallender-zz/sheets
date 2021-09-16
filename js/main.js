@@ -28,6 +28,14 @@ function selectSheet() {
     });
 }
 
+/* Start new sheet */
+function newSheet() {
+    currentSheet = sheets.length;
+    fields.forEach(function(field) {
+	document.getElementById(field).value = '';
+    });
+}
+
 window.onload = function() {
     if (localStorage.getItem('kidsOnBikes')) {
 	console.log('loading session');
@@ -38,7 +46,7 @@ window.onload = function() {
 
     document.getElementById('saveSheet').addEventListener('click', saveSheet);
     document.getElementById('loadSheet').addEventListener('click', loadSheet);
-    
+    document.getElementById('newSheet').addEventListener('click', newSheet);
     document.getElementById('sheetSelect').addEventListener('change', selectSheet);
     
 //    fields.forEach(function(field) {
@@ -48,6 +56,7 @@ window.onload = function() {
 //    });
 };
 
+/* Save current sheet */
 function saveSheet() {
     console.log('saveSheet');
     let sheet = {};
