@@ -1,11 +1,14 @@
-const fields = [
-    "name",
-    "age",
-    "fear",
-    "adversityTokens"
-];
+const fields = [];
 var sheets = [];
 var currentSheet = 0;
+
+/* Generate list of fields */
+function setFields() {
+    let i = 0;
+    Array.prototype.forEach.call(document.getElementsByClassName('sheetField'), function(field) {
+	fields[i++] = field.id;
+    });
+}
 
 /* Load sheets from local storage */
 function loadSheets() {
@@ -21,7 +24,7 @@ function loadSheets() {
 
 /* Load selected sheet */
 function selectSheet() {
-    currentSheet = document.getElementById('sheetSelect').selectedIndex;
+    currentSheet = document.getElementById('sheetSelect').selectedIndex - 1;
     let sheet = sheets[currentSheet];
     fields.forEach(function(field) {
 	document.getElementById(field).value = sheet[field];
@@ -42,6 +45,7 @@ function newSheet() {
 }
 
 window.onload = function() {
+    setFields();
     if (localStorage.getItem('kidsOnBikes')) {
 	console.log('loading session');
 	loadSheets();

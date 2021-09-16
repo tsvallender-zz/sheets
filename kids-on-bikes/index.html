@@ -14,22 +14,24 @@
     <main>
       <form id="sheetSelectForm">
 	<label for="sheetSelect">Select a sheet:</label>
-	<select name="sheetSelect" id="sheetSelect"></select>
+	<select name="sheetSelect" id="sheetSelect">
+	  <option disabled selected value>Select a sheet</option>
+	</select>
 	<input type="button" id="newSheet" value="New sheet">
       </form>
       
       <form>
 	<label for="name">Name</label>
-	<input type="text" name="name" id="name" autocomplete="off">
+	<input type="text" name="name" id="name" class="sheetField" autocomplete="off">
 
 	<label for="age">Age</label>
-	<input type="number" name="age" id="age" autocomplete="off">
+	<input type="number" name="age" id="age" class="sheetField" autocomplete="off">
 
 	<label for="fear">Fear</label>
-	<input type="text" name="fear" id="fear" autocomplete="off">
+	<input type="text" name="fear" id="fear" class="sheetField" autocomplete="off">
 
 	<label for="adversityTokens">Adversity tokens</label>
-	<input type="number" name="adversityTokens" id="adversityTokens" autocomplete="off">
+	<input type="number" name="adversityTokens" id="adversityTokens" class="sheetField" autocomplete="off">
 
 	<input type="button" id="saveSheet" value="Save sheet">
 	<input type="button" id="loadSheet" value="Load sheet">
