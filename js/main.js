@@ -1,6 +1,7 @@
 const fields = [];
 var sheets = [];
 var currentSheet = 0;
+var gameName;
 
 /* Generate list of fields */
 function setFields() {
@@ -12,7 +13,7 @@ function setFields() {
 
 /* Load sheets from local storage */
 function loadSheets() {
-    sheets = JSON.parse(localStorage.getItem('kidsOnBikes'));
+    sheets = JSON.parse(localStorage.getItem(gameName));
 
     let sheetSelect = document.getElementById('sheetSelect');
     sheets.forEach(function(sheet) {
@@ -45,14 +46,17 @@ function newSheet() {
 }
 
 window.onload = function() {
+    // Set up game-dependent fields
+    gameName = document.getElementById('gameName').value;
     setFields();
-    if (localStorage.getItem('kidsOnBikes')) {
+    if (localStorage.getItem(gameName)) {
 	console.log('loading session');
 	loadSheets();
     } else {
 	newSheet();
     }
 
+    // Set up form elements
     document.getElementById('saveSheet').addEventListener('click', saveSheet);
     document.getElementById('loadSheet').addEventListener('click', loadSheet);
     document.getElementById('newSheet').addEventListener('click', newSheet);
@@ -80,6 +84,6 @@ function saveSheet() {
     }
     let sheetSelect = document.getElementById('sheetSelect');
     sheetSelect[sheetSelect.selectedIndex].text = sheet['name'];
-    localStorage.setItem('kidsOnBikes', JSON.stringify(sheets));
+    localStorage.setItem(gameName, JSON.stringify(sheets));
 }
 
