@@ -57,12 +57,11 @@ window.onload = function() {
     document.getElementById('loadSheet').addEventListener('click', loadSheet);
     document.getElementById('newSheet').addEventListener('click', newSheet);
     document.getElementById('sheetSelect').addEventListener('change', selectSheet);
-    
-//    fields.forEach(function(field) {
-//	document.getElementById(field).addEventListener('change', function() {
-//	    localStorage.setItem(field, document.getElementById(field).value);
-//	})
-//    });
+
+    // Autosave changes
+    fields.forEach(function(field) {
+	document.getElementById(field).addEventListener('change', saveSheet);
+    });
 };
 
 /* Save current sheet */
