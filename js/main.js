@@ -28,7 +28,12 @@ function selectSheet() {
     currentSheet = document.getElementById('sheetSelect').selectedIndex - 1;
     let sheet = sheets[currentSheet];
     fields.forEach(function(field) {
-	document.getElementById(field).value = sheet[field];
+	f = document.getElementById(field);
+	if(f.type == 'checkbox') {
+	    f.checked = sheet[field];
+	} else {
+	    f.value = sheet[field];
+	}
     });
 }
 
@@ -45,7 +50,7 @@ function newSheet() {
     sheetSelect.selectedIndex = sheetSelect.length - 1;
 }
 
-window.onload = function() {
+function sheetSetup() {
     // Set up game-dependent fields
     gameName = document.getElementById('gameName').value;
     setFields();
@@ -56,8 +61,6 @@ window.onload = function() {
     }
 
     // Set up form elements
-    document.getElementById('saveSheet').addEventListener('click', saveSheet);
-    document.getElementById('loadSheet').addEventListener('click', loadSheet);
     document.getElementById('newSheet').addEventListener('click', newSheet);
     document.getElementById('sheetSelect').addEventListener('change', selectSheet);
 
@@ -71,7 +74,11 @@ window.onload = function() {
 function saveSheet() {
     let sheet = {};
     fields.forEach(function(field) {
-	sheet[field.toString()] = document.getElementById(field).value;
+	if (document.getElementById(field).type == 'checkbox') {
+	    sheet[field.toString()] = document.getElementById(field).checked;
+	} else {
+	    sheet[field.toString()] = document.getElementById(field).value;
+	}
     });
     sheets[currentSheet] = sheet;
     let sheetSelect = document.getElementById('sheetSelect');

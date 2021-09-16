@@ -2,6 +2,7 @@
 <html>
   <head>
     <script src="../js/main.js"></script>
+    <script src="./kidsOnBikes.js"></script>
     <link rel="stylesheet" media="all" href="../main.css" />
     <title>Sheets &amp; things.</title>
     <meta charset="UTF-8">
@@ -22,20 +23,68 @@
       </form>
       
       <form>
-	<label for="name">Name</label>
-	<input type="text" name="name" id="name" class="sheetField" autocomplete="off">
+	<fieldset>
+	  <label for="name">Name</label>
+	  <input type="text" name="name" id="name" class="sheetField" autocomplete="off">
+	  
+	  <label for="age">Age</label>
+	  <input type="number" name="age" id="age" class="sheetField" autocomplete="off">
+	  
+	  <label for="fear">Fear</label>
+	  <input type="text" name="fear" id="fear" class="sheetField" autocomplete="off">
+	  
+	  <label for="motivation">Motivation</label>
+	  <input type="text" name="motivation" id="motivation" class="sheetField" autocomplete="off">
+	  
+	  <label for="flaws">Flaws</label>
+	  <input type="text" name="flaws" id="flaws" class="sheetField" autocomplete="off">
+	  
+	  <label for="description">Description</label>
+	  <input type="text" name="description" id="description" class="sheetField" autocomplete="off">
+	  
+	  <label for="adversityTokens">Adversity tokens</label>
+	  <input type="number" name="adversityTokens" id="adversityTokens" class="sheetField" autocomplete="off">
+	</fieldset>
 
-	<label for="age">Age</label>
-	<input type="number" name="age" id="age" class="sheetField" autocomplete="off">
+	<fieldset>
+	  <legend>Stats</legend>
+	  <label for="fight">Fight</label>
+	  <select name="fight" id="fight" class="sheetField stat">
+	    <option disabled selected value>Select a die</option>
+	  </select>
+	  <label for="flight">Flight</label>
+	  <select name="flight" id="flight" class="sheetField stat">
+	    <option disabled selected value>Select a die</option>
+	  </select>
+	  <label for="brains">Brains</label>
+	  <select name="brains" id="brains" class="sheetField stat">
+	    <option disabled selected value>Select a die</option>
+	  </select>
+	  <label for="brawn">Brawn</label>
+	  <select name="brawn" id="brawn" class="sheetField stat">
+	    <option disabled selected value>Select a die</option>
+	  </select>
+	  <label for="charm">Charm</label>
+	  <select name="charm" id="charm" class="sheetField stat">
+	    <option disabled selected value>Select a die</option>
+	  </select>
+	  <label for="grit">Grit</label>
+	  <select name="grit" id="grit" class="sheetField stat">
+	    <option disabled selected value>Select a die</option>
+	  </select>
+	</fieldset>
 
-	<label for="fear">Fear</label>
-	<input type="text" name="fear" id="fear" class="sheetField" autocomplete="off">
+	<fieldset>
+	  <legend>Strengths</legend>
+	  <ul id="strengthsList">
+	  </ul>
+	</fieldset>
 
-	<label for="adversityTokens">Adversity tokens</label>
-	<input type="number" name="adversityTokens" id="adversityTokens" class="sheetField" autocomplete="off">
+	<label for="notes">Notes</label>
+	<textarea id="notes" name="notes" class="sheetField"></textarea>
 
-	<input type="button" id="saveSheet" value="Save sheet">
-	<input type="button" id="loadSheet" value="Load sheet">
+	<label for="backpack">Backpack</label>
+	<textarea id="backpack" name="backpack" class="sheetField"></textarea>
       </form>
     </main>
   </body>
