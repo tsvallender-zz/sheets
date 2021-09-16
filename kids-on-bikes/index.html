@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" media="all" href="../main.css" />
+    <title>Sheets &amp; things.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body id="kids-on-bikes">
+    <header>
+      <h1>Kids on Bikes</h1>
+    </header>
+    <main>
+      <form id="sheetSelectForm">
+	<label for="sheetSelect">Select a sheet:</label>
+	<select name="sheetSelect" id="sheetSelect"></select>
+      </form>
+      
+      <form>
+	<label for="name">Name</label>
+	<input type="text" name="name" id="name" autocomplete="off">
+
+	<label for="age">Age</label>
+	<input type="number" name="age" id="age">
+
+	<label for="fear">Fear</label>
+	<input type="text" name="fear" id="fear">
+
+	<label for="adversityTokens">Adversity tokens</label>
+	<input type="number" name="adversityTokens" id="adversityTokens">
+
+	<input type="button" id="saveSheet" value="Save sheet">
+	<input type="button" id="loadSheet" value="Load sheet">
+      </form>
+    </main>
+  </body>
+</html>
+    
