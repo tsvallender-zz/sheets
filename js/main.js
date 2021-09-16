@@ -50,7 +50,6 @@ window.onload = function() {
     gameName = document.getElementById('gameName').value;
     setFields();
     if (localStorage.getItem(gameName)) {
-	console.log('loading session');
 	loadSheets();
     } else {
 	newSheet();
@@ -70,18 +69,11 @@ window.onload = function() {
 
 /* Save current sheet */
 function saveSheet() {
-    console.log('saveSheet');
     let sheet = {};
     fields.forEach(function(field) {
 	sheet[field.toString()] = document.getElementById(field).value;
     });
-    if (sheets) {
-	console.log("Saving sheet " + currentSheet);
-	sheets[currentSheet] = sheet;
-    } else {
-	console.log("Saving first sheet");	       
-	sheets.push(sheet);
-    }
+    sheets[currentSheet] = sheet;
     let sheetSelect = document.getElementById('sheetSelect');
     sheetSelect[sheetSelect.selectedIndex].text = sheet['name'];
     localStorage.setItem(gameName, JSON.stringify(sheets));
