@@ -86,14 +86,17 @@ function setStrengths() {
     });
 
     Array.prototype.forEach.call(document.getElementsByClassName('strength'), function(strength) {
+	let box = document.getElementById(strength.name);
+	let desc = document.getElementById(strength.name+'-desc');
 	strength.addEventListener('change', function() {
-	    let desc = document.getElementById(strength.name+'-desc');
-	    if (desc.style.display == "inline") {
+	    console.log('changed');
+	    if (!box.checked) {
 		desc.style.display = "none";
 	    } else {
 		desc.style.display = "inline";
 	    }
 	});
     });
+
 }
 

@@ -31,6 +31,7 @@ function selectSheet() {
 	f = document.getElementById(field);
 	if(f.type == 'checkbox') {
 	    f.checked = sheet[field];
+	    f.dispatchEvent(new Event('change'));
 	} else {
 	    f.value = sheet[field];
 	}
