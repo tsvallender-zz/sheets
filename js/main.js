@@ -34,6 +34,11 @@ function newSheet() {
     fields.forEach(function(field) {
 	document.getElementById(field).value = '';
     });
+    let option = document.createElement('option');
+    option.text = 'New character';
+    sheetSelect = document.getElementById('sheetSelect');
+    sheetSelect.add(option);
+    sheetSelect.selectedIndex = sheetSelect.length - 1;
 }
 
 window.onload = function() {
@@ -70,6 +75,8 @@ function saveSheet() {
 	console.log("Saving first sheet");	       
 	sheets.push(sheet);
     }
+    let sheetSelect = document.getElementById('sheetSelect');
+    sheetSelect[sheetSelect.selectedIndex].text = sheet['name'];
     localStorage.setItem('kidsOnBikes', JSON.stringify(sheets));
 }
 
