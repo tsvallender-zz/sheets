@@ -16,14 +16,15 @@
       <form id="sheetSelectForm">
 	<input type="hidden" id="gameName" value="kidsOnBikes">
 	<label for="sheetSelect">Select a sheet:</label>
-	<select name="sheetSelect" id="sheetSelect">
+	<select name="sheetSelect" id="sheetSelect" autocomplete="off">
 	  <option disabled selected value>Select a sheet</option>
 	</select>
 	<input type="button" id="newSheet" value="New sheet">
       </form>
       
-      <form>
-	<fieldset>
+      <form id="sheet">
+	<fieldset id="info">
+	  <legend>Personal</legend>
 	  <label for="name">Name</label>
 	  <input type="text" name="name" id="name" class="sheetField" autocomplete="off">
 	  
@@ -46,44 +47,44 @@
 	  <input type="number" name="adversityTokens" id="adversityTokens" class="sheetField" autocomplete="off">
 	</fieldset>
 
-	<fieldset>
+	<fieldset id="stats">
 	  <legend>Stats</legend>
-	  <label for="fight">Fight</label>
+	  <label for="fight" id="fightLabel">Fight</label>
 	  <select name="fight" id="fight" class="sheetField stat">
 	    <option disabled selected value>Select a die</option>
 	  </select>
-	  <label for="flight">Flight</label>
+	  <label for="flight" id="flightLabel">Flight</label>
 	  <select name="flight" id="flight" class="sheetField stat">
 	    <option disabled selected value>Select a die</option>
 	  </select>
-	  <label for="brains">Brains</label>
+	  <label for="brains" id="brainsLabel">Brains</label>
 	  <select name="brains" id="brains" class="sheetField stat">
 	    <option disabled selected value>Select a die</option>
 	  </select>
-	  <label for="brawn">Brawn</label>
+	  <label for="brawn" id="brawnLabel">Brawn</label>
 	  <select name="brawn" id="brawn" class="sheetField stat">
 	    <option disabled selected value>Select a die</option>
 	  </select>
-	  <label for="charm">Charm</label>
+	  <label for="charm" id="charmLabel">Charm</label>
 	  <select name="charm" id="charm" class="sheetField stat">
 	    <option disabled selected value>Select a die</option>
 	  </select>
-	  <label for="grit">Grit</label>
+	  <label for="grit" id="gritLabel">Grit</label>
 	  <select name="grit" id="grit" class="sheetField stat">
 	    <option disabled selected value>Select a die</option>
 	  </select>
 	</fieldset>
 
-	<fieldset>
+	<fieldset id="strengths">
 	  <legend>Strengths</legend>
 	  <ul id="strengthsList">
 	  </ul>
 	</fieldset>
 
-	<label for="notes">Notes</label>
+	<label for="notes" id="notesLabel">Notes</label>
 	<textarea id="notes" name="notes" class="sheetField"></textarea>
 
-	<label for="backpack">Backpack</label>
+	<label for="backpack" id="backpackLabel">Backpack</label>
 	<textarea id="backpack" name="backpack" class="sheetField"></textarea>
       </form>
     </main>
