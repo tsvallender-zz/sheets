@@ -16,6 +16,11 @@ textarea, input#name {
 fieldset#info {
     width: 100%;
     display: grid;
+    text-align: center;
+}
+
+fieldset#info > input {
+    width: 2em;
 }
 
 label[for="level"] {
