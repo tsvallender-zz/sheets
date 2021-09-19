@@ -11,6 +11,10 @@ body {
     padding: 1em;
 }
 
+form {
+    display: block;
+}
+
 textarea, input#name {
     display: block;
     width: 100%;
