@@ -8,8 +8,13 @@ body {
     background-color: #fff;
 }
 
+textarea, input#name {
+    display: block;
+    width: 100%;
+}
 
 fieldset#info {
+    width: 100%;
     display: grid;
 }
 
