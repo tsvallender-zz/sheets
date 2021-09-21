@@ -52,6 +52,7 @@ function newSheet() {
 }
 
 function sheetSetup() {
+    console.log("hello");
     // Set up game-dependent fields
     gameName = document.getElementById('gameName').value;
     setFields();

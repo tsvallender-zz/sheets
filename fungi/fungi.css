@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Junction;
+    src: url('../junction-regular.woff');
+}
+
 html {
     background-color: gray;
     margin: 0;
@@ -11,23 +16,60 @@ body {
     padding: 1em;
 }
 
+h1 {
+    font-family: Junction, sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
 form {
+    margin: 1em;
     display: block;
 }
 
 textarea, input#name {
     display: block;
     width: 100%;
+    font-size: 2em;
+}
+
+label, legend {
+    font-size: 1.3em;
+    font-weight: normal;
+    font-family: Junction, sans-serif;
+}
+
+textarea {
+    resize: none;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    padding: .5em;
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    height: 10em;
+}
+
+fieldset {
+    margin-top: 1em;
 }
 
 fieldset#info {
-    width: 100%;
     display: grid;
     text-align: center;
+    align-items: center;
+    justify-items: center;
 }
 
 fieldset#info > input {
-    width: 2em;
+    margin: .5em;
+    padding: .5em;
+    font-size: 1.5em;
+    width: 50%;
+}
+
+label[for="inventoryScore"], #inventoryScore {
+    margin: 1em;
 }
 
 label[for="level"] {
