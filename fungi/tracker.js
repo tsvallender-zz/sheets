@@ -10,10 +10,11 @@ function addMushroom() {
     
     let row = table.insertRow();
     let cell = row.insertCell();
-    cell.innerHTML = '<input type="text" id="mushroom'+id+'"name="mushroom'+id+'" class="sheetField" autocomplete="off">'
+
+    cell.innerHTML = '<input type="text" id="mushroom'+id.toString()+'"name="mushroom'+id.toString()+'" class="sheetField" autocomplete="off">'
     cell = row.insertCell();
-    cell.innerHTML = '<input type="number" id="collected'+id+'"name="collected'+id+'" class="sheetField" autocomplete="off">'
+    cell.innerHTML = '<input type="number" id="collected'+id.toString()+'"name="collected'+id.toString()+'" class="sheetField" autocomplete="off">'
     cell = row.insertCell();
-    cell.innerHTML = '<input type="text" id="rarity'+id+'"name="rarity'+id+'" class="sheetField" autocomplete="off">'
+    cell.innerHTML = '<input type="text" id="rarity'+id.toString()+'"name="rarity'+id.toString()+'" class="sheetField" autocomplete="off">'
 }
 
