@@ -12,8 +12,8 @@ function addMushroom() {
     let cell = row.insertCell();
     let input = document.createElement('input');
     input.setAttribute('type', 'text');
-    input.setAttribute('id', 'id'+i.toSring());
-    input.setAttribute('name', 'id'+i.toSring());
+    input.setAttribute('id', 'mushroom');
+    input.setAttribute('name', 'mushroom');
     input.setAttibute('class', 'sheetField');
     cell.appendChild(input);
 }
