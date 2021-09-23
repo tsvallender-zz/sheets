@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../js/main.js"></script>
+    <script src="./fungi.js"></script>
+    <link rel="stylesheet" media="all" href="./fungi.css" />
+    <title>Character sheet: Fungi Fossicking in Fungal Furrow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body id="fungi">
+    <header>
+      <h1>Fungi Fossicking in Fungal Furrow</h1>
+    </header>
+    <main>
+      <form id="sheetSelectForm">
+	<input type="hidden" id="gameName" value="fungi">
+	<label for="sheetSelect">Select a sheet:</label>
+	<select name="sheetSelect" id="sheetSelect" autocomplete="off">
+	  <option disabled selected value>Select a sheet</option>
+	</select>
+	<input type="button" id="newSheet" value="New sheet">
+      </form>
+      
+      <form id="sheet">
+	<input type="text" name="name" id="name" class="sheetField" placeholder="Name" autocomplete="off">
+
+	<fieldset id="info">
+	  <legend>Stats</legend>
+	  <label for="level">Level</label>
+	  <input type="number" name="level" id="level" class="sheetField" autocomplete="off">
+	  
+	  <label for="maxHP">Max HP</label>
+	  <input type="number" name="maxHP" id="maxHP" class="sheetField" autocomplete="off">
+
+	  <label for="currentHP">HP</label>
+	  <input type="number" name="currentHP" id="currentHP" class="sheetField" autocomplete="off">
+
+	  <label for="mycologist">Mycologist</label>
+	  <input type="number" name="mycologist" id="mycologist" class="sheetField" autocomplete="off">
+	  
+	  <label for="mycotoxicologist">Mycotoxicologist</label>
+	  <input type="number" name="mycotoxicologist" id="mycotoxicologist" class="sheetField" autocomplete="off">
+
+	  <label for="brute">Brute</label>
+	  <input type="number" name="brute" id="brute" class="sheetField" autocomplete="off">
+	</fieldset>
+
+	<fieldset>
+	  <legend>Inventory</legend>
+	  <label for="inventoryScore">Inventory Score</label>
+	  <input type="number" name="inventoryScore" id="inventoryScore" class="sheetField" autocomplete="off">
+	  <textarea id="inventory" name="inventory" class="sheetField"></textarea>
+	</fieldset>
+	<fieldset>
+	  <legend>Notes</legend>
+	  <textarea id="notes" name="notes" class="sheetField"></textarea>
+	</fieldset>
+      </form>
+    </main>
+  </body>
+</html>
+    

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../js/main.js"></script>
+    <script src="./tracker.js"></script>
+    <link rel="stylesheet" media="all" href="./fungi.css" />
+    <title>Character sheet: Fungi Fossicking in Fungal Furrow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body id="fungi">
+    <header>
+      <h1>Mushroom tracker - Fungi Fossicking in Fungal Furrow</h1>
+    </header>
+    <main>
+      <form id="sheetSelectForm">
+	<input type="hidden" id="gameName" value="fungi-tracker">
+	<label for="sheetSelect">Select a sheet:</label>
+	<select name="sheetSelect" id="sheetSelect" autocomplete="off">
+	  <option disabled selected value>Select a sheet</option>
+	</select>
+	<input type="button" id="newSheet" value="New sheet">
+      </form>
+      
+      <form id="sheet">
+	<input type="text" name="name" id="name" class="sheetField" placeholder="Game name" autocomplete="off">
+
+	<table id="mushroomTracker">
+	  <tr>
+	    <th>Mushroom</th>
+	    <th>Number collected</th>
+	    <th>Rarity (DR)</th>
+	  </tr>
+	</table>
+
+	<input type="button" id="addMushroom" value="Add mushroom">
+	
+	<fieldset>
+	  <legend>Notes</legend>
+	  <textarea id="notes" name="notes" class="sheetField"></textarea>
+	</fieldset>
+      </form>
+    </main>
+  </body>
+</html>
+    
