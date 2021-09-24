@@ -4,7 +4,8 @@
 }
 
 html {
-    background-color: gray;
+    background-image: url("background.png");
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
 }
