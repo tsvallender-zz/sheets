@@ -1,0 +1,143 @@
+@font-face {
+    font-family: Junction;
+    src: url('../junction-regular.woff');
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Junction, Helvetica, Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: .25em;
+}
+
+@media (min-width: 750px) {
+    body {
+	padding: 1em;
+    }
+    fieldset {
+	margin: 1em 0em;
+    }
+    form#sheet {
+	display: grid;
+	grid-template-columns: 50% 50%;
+    }
+    fieldset#info {
+	grid-column: 1;
+    }
+    fieldset#stats {
+	grid-column: 2;
+    }
+}
+
+legend {
+    font-weight: bold;
+}
+
+input[type=text], input[type=number] {
+    padding: .5em;
+    margin: .25em 0em;
+}
+
+fieldset#info {
+    display: grid;
+    text-align: right;
+    align-items: center;
+}
+fieldset#info > label {
+    grid-column: 1;
+    margin-right: .5em;
+}
+fieldset#info > input {
+    grid-column: 2;
+}
+
+fieldset#stats {
+    display: grid;
+    align-items: center;
+}
+fieldset#stats > select {
+    padding: .5em;
+    margin: .5em;
+}
+
+#fightLabel, #brainsLabel, #charmLabel {
+    grid-column: 1;
+    text-align: right;
+}
+
+#fightLabel {
+     grid-row: 1;
+}
+#fight {
+    grid-column: 2;
+    grid-row: 1;
+}
+#flight {
+    grid-column: 3;
+    grid-row: 1;
+}
+#flightLabel {
+    grid-column: 4;
+    grid-row: 1;
+}
+#brainsLabel {
+     grid-row: 2;
+}
+#brains {
+    grid-column: 2;
+    grid-row: 2;
+}
+#brawn {
+    grid-column: 3;
+    grid-row: 2;
+}
+#brawnLabel {
+    grid-column: 4;
+    grid-row: 2;
+}
+#charmLabel {
+     grid-row: 3;
+}
+#charm {
+    grid-column: 2;
+    grid-row: 3;
+}
+#grit {
+    grid-column: 3;
+    grid-row: 3;
+}
+#gritLabel {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+
+
+fieldset#strengths {
+    grid-column: 1/3;
+}
+
+.strengthDescription {
+    display: none;
+    color: gray;
+    font-style: italic;
+}
+
+#notesField, #backpackField {
+    padding: 0;
+}
+textarea {
+    font-family: Junction;
+    padding: 1em;
+    resize: none;
+    height: 11em;
+    width: 100%;
+    border: 0;
+}
+
+.hide {
+    float: right;
+}

@@ -3,7 +3,7 @@
   <head>
     <script src="../js/main.js"></script>
     <script src="./kidsOnBikes.js"></script>
-    <link rel="stylesheet" media="all" href="../main.css" />
+    <link rel="stylesheet" media="all" href="kids-on-bikes.css" />
     <title>Sheets &amp; things.</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -77,15 +77,109 @@
 
 	<fieldset id="strengths">
 	  <legend>Strengths</legend>
-	  <ul id="strengthsList">
-	  </ul>
+	  <div>
+	    <input type="checkbox" id="rebellious" name="rebellious" class="sheetField strength">
+	    <label for="rebellious" id="rebellious-label">Rebellious</label>
+	  </div>
+	  <span id="rebellious-desc" class="strengthDescription">
+	    Add +3 to rolls when persuading children or
+	    resisting persuasion from children or adults.</span>
+
+	  <div>
+	    <input type="checkbox" id="quickHealing" name="quickHealing" class="sheetField strength">
+	    <label for="quickHealing" id="quickHealing-label">Quick Healing</label>
+	  </div>
+	  <span id="quickHealing-desc" class="strengthDescription">
+	    You recover from injuries more quickly, and don’t
+	    suffer lasting effects from most injuries.</span>
+
+	  <div>
+	    <input type="checkbox" id="protective" name="protective" class="sheetField strength">
+	    <label for="protective" id="protective-label">Protective</label>
+	  </div>
+	  <span id="protective-desc" class="strengthDescription">
+	    Add +3 to rolls when defending one of your friends.</span>
+
+	  <div>
+	    <input type="checkbox" id="prepared" name="prepared" class="sheetField strength">
+	    <label for="prepared" id="prepared-label">Prepared</label>
+	  </div>
+	  <span id="prepared-desc" class="strengthDescription">
+	    May spend 2 Adversity Tokens to just happen to have
+	    one commonplace item with you (GM’s discretion).</span>
+
+	  <div>
+	    <input type="checkbox" id="lucky" name="lucky" class="sheetField strength">
+	    <label for="lucky" id="lucky-label">Lucky</label>
+	    </div>
+	  <span id="lucky-desc" class="strengthDescription">
+	    May spend 2 Adversity Tokens to reroll a stat check.</span>
+
+	  <div>
+	    <input type="checkbox" id="loyal" name="loyal" class="sheetField strength">
+	    <label for="loyal" id="loyal-label">Loyal</label>
+	  </div>
+	  <span id="loyal-desc" class="strengthDescription">
+	    Each of the Adversity Tokens you spend to help your
+	    friends gives them a +2 instead of a +1.</span>
+
+	  <div>
+	    <input type="checkbox" id="intuitive" name="intuitive" class="sheetField strength">
+	    <label for="intuitive" id="intuitive-label">Intuitive</label>
+	    </div>
+	  <span id="intuitive-desc" class="strengthDescription">
+	    May spend 1 Adversity Token to ask the GM about your
+	    surroundings, an NPC, or the like. The GM must answer
+	    honestly.</span>
+
+	  <div>
+	    <input type="checkbox" id="heroic" name="heroic" class="sheetField strength">
+	    <label for="heroic" id="heroic-label">Heroic</label>
+	  </div>
+	  <span id="heroic-desc" class="strengthDescription">
+	    You do not need the GM’s permission to spend
+	    Adversity Tokens to ignore fears.</span>
+
+	  <div>
+	    <input type="checkbox" id="gross" name="gross" class="sheetField strength">
+	    <label for="gross" id="gross-label">Gross</label>
+	  </div>
+	  <span id="gross-desc" class="strengthDescription">
+	    You have some kind of gross bodily trick (loud,
+	    quiet, smelly… up to you) that you can do on
+	    command.</span>
+
+	  <div>
+	    <input type="checkbox" id="easygoing" name="easygoing" class="sheetField strength">
+	    <label for="easygoing" id="easygoing-label">Easygoing</label>
+	  </div>
+	  <span id="easygoing-desc" class="strengthDescription">
+	    Gain 2 Adversity Tokens when you fail, instead of 1.</span>
+
+	  <div>
+	    <input type="checkbox" id="coolUnderPressure" name="coolUnderPressure" class="sheetField strength">
+	    <label for="coolUnderPressure" id="coolUnderPressure-label">Cool Under Pressure</label>
+	  </div>
+	  <span id="coolUnderPressure-desc" class="strengthDescription">
+	    May spend 1 Adversity Token to take half of your
+	    die’s value instead of rolling on a Snap Decision.</span>
+
 	</fieldset>
 
-	<label for="notes" id="notesLabel">Notes</label>
-	<textarea id="notes" name="notes" class="sheetField"></textarea>
+	<fieldset id="notesField">
+	  <legend>Notes</legend>
+	  <textarea id="notes" name="notes" class="sheetField"></textarea>
+	</fieldset>
 
-	<label for="backpack" id="backpackLabel">Backpack</label>
-	<textarea id="backpack" name="backpack" class="sheetField"></textarea>
+	<fieldset id="backpackField">
+	  <legend>Backpack</legend>
+	  <textarea id="backpack" name="backpack" class="sheetField"></textarea>
+	</fieldset>
+
+	<div class="hide">
+	  <input type="checkbox" id="hideUnused" name="hideUnused" class="sheetField">
+	  <label for="hideUnused">Hide unused strengths.</label>
+	</div>
       </form>
     </main>
   </body>
